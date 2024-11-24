@@ -1,0 +1,19 @@
+spring:
+        jpa:
+                generate-ddl: true  # 自动生成表
+                hibernate:
+                        ddl-auto: create  # 在启动时创建表，关闭时删除表
+                show-sql: true  # 显示SQL语句
+                properties:
+                        hibernate:
+                                dialect: org.hibernate.dialect.SQLServerDialect  # SQL Server方言
+                                format_sql: true  # 格式化SQL输出
+
+logging:
+        level:
+                root: INFO # 设置全局日志级别为 INFO，只显示重要的日志信息（略过 DEBUG 和 TRACE 级别）
+                org.hibernate.SQL: DEBUG # 对于 Hibernate SQL 查询，使用 DEBUG 级别
+
+server:
+        port: 8080
+        address: 0.0.0.0

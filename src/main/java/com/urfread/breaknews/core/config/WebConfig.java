@@ -16,7 +16,6 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         //所有路径都经过拦截器，但排除 /user 下的路径
         registry.addInterceptor(jwtInterceptor)
-                .excludePathPatterns("/test/**")
                 .excludePathPatterns("/user/**")
                 .excludePathPatterns("/image/view/**");
     }

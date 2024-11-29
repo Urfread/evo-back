@@ -1,9 +1,11 @@
 package com.urfread.breaknews.core.tag;
 
-import java.util.ArrayList;
+import lombok.Getter;
+
 import java.util.LinkedList;
 import java.util.List;
 
+@Getter
 public class TagNode {
     private String content; // 标签内容
     private final List<TagNode> children ; // 子标签列表
@@ -33,11 +35,4 @@ public class TagNode {
         }
     }
 
-    public List<TagNode> getChildren() {
-        return children;
-    }
-
-    public String getContent() {
-        return content;
-    }
 }

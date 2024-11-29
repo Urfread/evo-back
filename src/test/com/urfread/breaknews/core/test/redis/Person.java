@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -24,7 +23,6 @@ import java.io.Serializable;
 public class Person implements Serializable {
 
     // 序列化版本号。每次类的版本发生变化时，都应该修改该值，以保证兼容性。
-    @Serial // 这是 JDK 16+ 的注解，用于标记 serialVersionUID 字段
     private static final long serialVersionUID = 1L;
     private String name;
     private int age;

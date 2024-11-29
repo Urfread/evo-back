@@ -67,7 +67,7 @@ public class ArticleController {
                         .createTime(article.getCreateTime())
                         .updateTime(article.getUpdateTime())
                         .deleted(article.getDeleted())
-                        .tagStr(TagUtil.tagsToString(tagService.getTagsByEntityId(article.getId(), "article"),true)) // 设置 tagStr 字段
+                        .tagStr(TagUtil.treeToTagString(tagService.getTagsByEntityId(article.getId(), "article"),true)) // 设置 tagStr 字段
                         .build())
                 .collect(Collectors.toList());
 

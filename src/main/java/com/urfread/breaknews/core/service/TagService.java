@@ -33,7 +33,7 @@ public class TagService {
         List<TagRelation> oldRelations = tagRelationRepository.findByEntityIdAndEntityType(entityId, entityType);
         // 删除旧关系
         tagRelationRepository.deleteAll(oldRelations);
-        saveTagTree(TagUtil.parseTags(input), uid, entityType, entityId);
+        saveTagTree(TagUtil.parseTagStringToTree(input), uid, entityType, entityId);
     }
     private void saveTagTree(TagNode node, Integer uid,String entityType,Integer entityId) {
         Tag rootTag=tagRepository.findTagsByUidAndContent(uid, "root");

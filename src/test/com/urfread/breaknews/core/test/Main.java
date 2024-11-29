@@ -1,6 +1,7 @@
 package com.urfread.breaknews.core.test;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static String solution(int[] nums, int k) {
@@ -15,7 +16,7 @@ public class Main {
             insertOrIgnore(topKElements,topKCounts,entry.getKey(),entry.getValue(),k);
         }
         Arrays.sort(topKElements);
-        List<String>numberStrings=Arrays.stream(topKElements).map(String::valueOf).toList();
+        List<String>numberStrings=Arrays.stream(topKElements).map(String::valueOf).collect(Collectors.toList());
         System.out.println(String.join(",",numberStrings));
         return String.join(",",numberStrings);
     }

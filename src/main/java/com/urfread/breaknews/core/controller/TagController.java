@@ -37,7 +37,7 @@ public class TagController {
         TagNode rootNode = TagUtil.buildTagTree(tags);
 
         // 将标签树转换为字符串形式，参数 'true' 表示只包含完整路径
-        String tagsAsString = TagUtil.tagsToString(rootNode, true);
+        String tagsAsString = TagUtil.treeToTagString(rootNode, true);
 
         // 返回成功的结果数据，包含标签字符串
         return ResultData.success(tagsAsString);

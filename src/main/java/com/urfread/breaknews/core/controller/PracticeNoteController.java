@@ -72,7 +72,7 @@ public class PracticeNoteController {
                         .updateTime(practice.getUpdatedTime())
                         .deleted(practice.getDeleted())
                         // TODO:改Long
-                        .tagStr(TagUtil.tagsToString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"),true)) // 设置 tagStr 字段
+                        .tagStr(TagUtil.treeToTagString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"),true)) // 设置 tagStr 字段
                         .build())
                 .collect(Collectors.toList());
 
@@ -109,7 +109,7 @@ public class PracticeNoteController {
                         .createTime(practice.getCreatedTime())
                         .updateTime(practice.getUpdatedTime())
                         .deleted(practice.getDeleted())
-                        .tagStr(TagUtil.tagsToString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"), true))
+                        .tagStr(TagUtil.treeToTagString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"), true))
                         .build())
                 .collect(Collectors.toList());
 
@@ -138,7 +138,7 @@ public class PracticeNoteController {
                         .createTime(practice.getCreatedTime())
                         .updateTime(practice.getUpdatedTime())
                         .deleted(practice.getDeleted())
-                        .tagStr(TagUtil.tagsToString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"), true))
+                        .tagStr(TagUtil.treeToTagString(tagService.getTagsByEntityId(practice.getId().intValue(), "practice"), true))
                         .build())
                 .collect(Collectors.toList());
 

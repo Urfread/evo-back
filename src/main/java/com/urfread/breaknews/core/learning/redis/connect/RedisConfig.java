@@ -14,7 +14,7 @@ public class RedisConfig {
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
         // 创建 Lettuce 连接工厂
-        LettuceConnectionFactory factory = new LettuceConnectionFactory("192.168.171.130", 6379);
+        LettuceConnectionFactory factory = new LettuceConnectionFactory("192.168.171.131", 6379);
         factory.setPassword("123456");  // 设置 Redis 密码
         return factory;
     }

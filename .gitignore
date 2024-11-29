@@ -13,7 +13,6 @@ target/
 
 # Maven 和 Gradle 缓存文件
 /.mvn/
-/.mvn/
 /.gradle/
 /build/
 
@@ -37,3 +36,4 @@ target/
 *.jar
 *.war
 *.ear
+/person.ser
